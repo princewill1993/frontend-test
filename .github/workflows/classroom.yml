@@ -1,0 +1,50 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Multiple Choice Questions
+      id: multiple-choice-questions
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Multiple Choice Questions
+        setup-command: npm install
+        command: node secure-check-mc-answers.js
+        timeout: 10
+        max-score: 30
+    - name: Article Link Validation
+      id: article-link-validation
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Article Link Validation
+        setup-command: npm install
+        command: node secure-check-article-links.js
+        timeout: 10
+        max-score: 15
+    - name: Coding Challenge
+      id: coding-challenge
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Coding Challenge
+        setup-command: npm install
+        command: npm test
+        timeout: 10
+        max-score: 30
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        MULTIPLE-CHOICE-QUESTIONS_RESULTS: "${{steps.multiple-choice-questions.outputs.result}}"
+        ARTICLE-LINK-VALIDATION_RESULTS: "${{steps.article-link-validation.outputs.result}}"
+        CODING-CHALLENGE_RESULTS: "${{steps.coding-challenge.outputs.result}}"
+      with:
+        runners: multiple-choice-questions,article-link-validation,coding-challenge

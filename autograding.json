@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Code Implementation Tests",
+      "setup": "npm install",
+      "run": "npm run test:code",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 40
+    },
+    {
+      "name": "Multiple Choice Questions",
+      "setup": "",
+      "run": "npm run test:mc",
+      "input": "",
+      "output": "All answers correct",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 30
+    },
+    {
+      "name": "Article Link Verification",
+      "setup": "",
+      "run": "npm run test:links",
+      "input": "",
+      "output": "Both LinkedIn and Twitter links are valid",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    }
+  ]
+}
