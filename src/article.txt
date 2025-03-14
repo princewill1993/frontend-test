@@ -1,0 +1,29 @@
+RESPONSIVE WEBSITE:
+
+
+
+Back in the day, developers usually  create 2 separate website for a company. One for desktop users, and the others for mobile device users. 
+
+Now that smart phone usage is higher than ever , web designers can create just one website that seamlessly scale contents to fit any screen.
+ This is called responsive web design.  
+ Implementing the responsive web design on your project means that each user despite the device will have a flexible experience, 
+ layouts and presentation might adjust according to the size of your screen, 
+ but your website and the information remains the same. The creator of responsive web design is ETHAN MARCOTTE, 
+ after getting tired of his clients often coming back to ask that he designs a different website for the iPhone, 
+ after having completed the design for the desktop website. This led him to a single, scalable design, 
+ so that his websites and their functions will be coherent between mobile devices and desktops alike. 
+ Responsive website also optimizes costs, saves designers time. Therefore, having one website that anyone can access
+ means you will be able to reach more people and devices Than ever.
+ Responsive web design can be achieved 
+ with the use of FLEXIBLE GRIDS, FLEXIBLE IMAGES AND MEDIA QUERIES, by syncing the layout graphics and images
+ to each users devices, the website liquid layout scale to fit the screen accessing it.  
+
+AMAZON:
+Websites like Amazon has benefitted a lot from responsive design as it allows users to complete purchase seamlessly regardless of screen size.
+Users could hop on the Amazon’s website using any device of their choice.
+It provides a collapsible hambuger menu on phones and a full menu on desktops, this helps the site adjust dynamically.
+	
+    Breakdown on how this works with media query; Responsive design css3 media query, instructs the website to collect data for the site’s visitor and then returns the information to the device software o it know which design to respond with, now the user’s browser will respond with the flexible image that best suits the users’ screen size.
+     However, the users gain the same information from the website, regardless of the device type.
+Back in 2002, Audi.com were the first to use responsive website.
+Companies across the world has found that responsive website provides a seamless experience for users. This is a way to take your organization or company into the future, no matter your industry.
